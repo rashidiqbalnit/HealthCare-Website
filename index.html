@@ -406,7 +406,7 @@
 
 
 <!--section class="contact" id="contact">
-   <h1 class="heading">Book Appointment</h1>
+   <!--h1 class="heading">Book Appointment</h1>
    <form action="/submit" onsubmit="sendEmail(); reset(); return false;" method="post">  <!--onsubmit="sendEmail(); reset(); return false;"-->
       
             <input type="text" id="name" placeholder="Your Name" required><br>
@@ -451,11 +451,11 @@
             <input type="datetime-local" id="datetime" name="date" required><br>
             <textarea id="message" rows="4" placeholder="how can we help you?"></textarea><br>
             <button type="submit">Submit</button>
-        </form>
+</form-->
 
 
 
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <!--script src="https://smtpjs.com/v3/smtp.js"></script>
     <script>
         function sendEmail(){
             Email.send({
@@ -481,14 +481,14 @@
         }
     </script>
 
-</section>
+</section-->
 <!--Contact section 1 end-->
 
 
 
 
 <!--Contact section 2 start-->
-<!--section class="contact" id="contact">
+<section class="contact" id="contact">
 
    <h1 class="heading">book appointment</h1>
 
@@ -551,7 +551,7 @@
 
       <button type="submit" name="submit" onclick="sendEmail(); reset(); return false;">Submit</button> <!--for test purpose-->
 
-</form-->
+</form>
 
 
 
@@ -582,7 +582,7 @@
             message => alert("Message Sent Succesfully")
             );
         }
-    </script-->
+</script-->
 
 
   <!--it is used for sending messag on database only-->
