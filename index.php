@@ -617,6 +617,86 @@
 
 
 
+    
+<!--contact section 3 start-->
+    <section class="contact" id="contact">
+   <h1 class="heading">Book Appointment</h1>
+   <form action="/submit" onsubmit="sendEmail(); reset(); return false;" method="post">  <!--onsubmit="sendEmail(); reset(); return false;"-->
+      
+            <input type="text" id="name" placeholder="Your Name" required><br>
+            <input type="text" id="phone" placeholder="Phone Number" required><br>
+            <input type="email" id="email" placeholder="Email Id" required><br>
+            <select style="select" id="option1">
+              <optgroup label="Search Specialist Type">
+                <option value="not selected" selected>Search Specialist Type *</option>
+                <option value="General Physician">General Physician</option>
+                <option value="Gynecologist">Gynecologist</option>
+                <option value="Cardiologists">Cardiologists</option>
+                <option value="Dermatologists">Dermatologists</option>
+                <option value="Gastroenterologists">Gastroenterologists</option>
+                <option value="Diabetologist">Diabetologist</option>
+                <option value="Pediatrics">Pediatrics</option>
+                <option value="Physiotherapist">Physiotherapist</option>
+                <option value="Dentist">Dentist</option>
+                <option value="Ophthalmologist">Ophthalmologist</option>
+              </optgroup>
+            </select>
+            <br>
+            <select style="select" id="option2">
+                <optgroup label="Search Doctors">
+                    <option value="not selected" selected>Search Doctors *</option>
+                    <option value="Dr. Ashok Seth">Dr. Ashok Seth</option>     <option value="Dr. G Girish">Dr. G Girish</option>
+                    <option value="Dr. Amir">Dr. Amir</option>    <option value="Dr. Iram">Dr. Iram</option>
+                    <option value="Dr. Naresh Trehan">Dr. Naresh Trehan</option>   <option value="Dr. Bidhan Chandra Roy">Dr. Bidhan Chandra Roy</option>
+                    <option value="Dr. Swarupa Mitra">Dr. Swarupa Mitra</option>   <option value="Dr. Mohamed Rafi">Dr. Mohamed Rafi</option>
+                    <option value="Dr Santosh Shetty">Dr Santosh Shetty</option>   <option value="Dr. Vinod Kumar">Dr. Vinod Kumar</option>
+                    <option value="Dr. Surbhi Anand">Dr. Surbhi Anand</option>     <option value="Dr. Dhiraj Balaji">Dr. Dhiraj Balaji</option>
+                    <option value="Dr. Ravi Gopal Varma">Dr. Ravi Gopal Varma</option>   <option value="Dr. Darshan Patil">Dr. Darshan Patil</option>
+                    <option value="Dr. Ramakanta Panda">Dr. Ramakanta Panda</option>    <option value="Dr. Murali Mohan C.R">Dr. Murali Mohan C.R</option>
+                    <option value="Dr. Shivashankar Roy">Dr. Shivashankar Roy</option>   <option value="Dr. Mathew Jacob">Dr. Mathew Jacob</option>
+                    <option value="Dr. Vinod Raina">Dr. Vinod Raina</option>    <option value="Dr. Apurva Pande">Dr. Apurva Pande</option>
+                    <option value="Dr. Yash Gulati">Dr. Yash Gulati</option>    <option value="Dr. Sujatha Thyagarajan">Dr. Sujatha Thyagarajan</option>
+                    <option value="Dr. Hemant Kalyan">Dr. Hemant Kalyan</option>    <option value="Dr. Dhananjaya Bhat">Dr. Dhananjaya Bhat</option>
+                    <option value="Dr. Sachin Suresh Jadhav">Dr. Sachin Suresh Jadhav</option>   <option value="Dr. Sreekanta Swamy">Dr. Sreekanta Swamy</option>
+                    <option value="Dr. Devi Prasad Shetty">Dr. Devi Prasad Shetty</option>    <option value="Dr. J V Srinivas">Dr. J V Srinivas</option>
+                </optgroup>
+            </select>
+            <br>
+            <input type="datetime-local" id="datetime" name="date" required><br>
+            <textarea id="message" rows="4" placeholder="how can we help you?"></textarea><br>
+            <button type="submit">Submit</button>
+</form>
+
+
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+                 Host : "smtp.elasticemail.com",
+                 Username : "rashidiqbalbih@gmail.com",
+                 Password : "BAE6DB226F6C775EAB64FA92C46893C8D60D",
+                 To : 'rk6612262@gmail.com',
+                 From : "rashidiqbalbih@gmail.com",
+                 //document.getElementById("email").value,
+                 Subject : "Appointment Form",
+                 Body :   "Name: " + document.getElementById("name").value
+                        + "<br><hr> Phone no:  " + document.getElementById("phone").value
+                        + "<br><hr> Email:  " + document.getElementById("email").value
+                        + "<br><hr> Specialist Type:  " + document.getElementById("option1").value
+                        + "<br><hr> Doctor name:  " + document.getElementById("option2").value
+                        + "<br><hr> Date-Time:  " + document.getElementById("datetime").value
+                        + "<br><hr> Message:  " + document.getElementById("message").value
+                        + "<br><hr>"
+            
+            }).then(
+            message => alert("Message Sent Succesfully")
+            );
+        }
+    </script>
+
+</section>
+<!--contact section 3 end-->
 
 
 
